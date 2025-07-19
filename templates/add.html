@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid py-3 justify-content-center col-xxl-12">
+      <ul class="nav nav-pills">
+          <li class="nav-item"><a href="{{url_for('home')}}" class="nav-link active me-3" aria-current="page" style="text-color:#372a28;background-color:#a3b18a">Home</a></li>
+          <li class="nav-item"><a href="{{url_for('add')}}" class="nav-link" style="text-color:#372a28;background-color:#52796f">Add Note</a></li>
+      </ul>
+    </div>
+</nav>
+<div class="container ">
+    <form action="{{url_for('add')}}" method="POST">
+        <div class="form-group mt-3">
+            {{form.hidden_tag()}}
+            {{form.title.label}}
+            {{form.title(rows=1, cols=20,class='form-control')}}
+        </div>
+        <div class="form-group mt-2 ">
+            {{form.body.label}}
+            {{form.body(rows=10, cols=20 ,class='form-control' )}}
+        </div>
+        <div class="form-group mt-5">
+            {{form.submit(class='form-control justify-content-center')}}
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
