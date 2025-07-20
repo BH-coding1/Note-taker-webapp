@@ -22,7 +22,7 @@ A simple notes application built with Flask, SQLAlchemy, and Bootstrap.
 
 ```bash
 git clone https://github.com/BH-coding1/Note-taker-webapp.git
-cd flask-notes-app
+cd Note-taker-webapp
 python -m venv .venv
 .venv\Scripts\activate  # Or source .venv/bin/activate on Mac/Linux
 pip install -r requirements.txt
